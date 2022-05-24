@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+  background-color: rgb(37, 37, 37);
+} 
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  border-bottom: 1px solid #7c7c7c;
+  padding: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.5);
+  margin: 0;
+  
+}
+
+.title-word-wordle {
+  color: white;
+}
+
+.title-word-unlimited {
+  color: #6aaa64;
+  font-style: italic;
+}
+
+.message-container {
+  margin-top: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  animation-name: Reveal;
+  animation-duration: 2s;
+}
+
+.message {
+  margin-top: 10px;
+  min-height: 30px;
+  color: white;
+  
+}
+
+.restart-button {
+  color: white;
+  font-size: .5rem;
+  margin-left: 20px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: #636363;
+  border-radius: 0.2rem;
+  cursor: grab;
+}
+
+.restart-button:hover {
+  filter: brightness(90%)
+}
+
+.restart-button:active {
+  filter: brightness(75%)
+}
+
+.game-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.guesses-container {
+  display: grid;
+  grid-template-columns: repeat(6);
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-character-square {
+  text-transform: uppercase;
+  display: flex;
+  font-size: 1.35rem;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  color: white;
+  border: 1px solid rgb(107, 107, 107);
+  
+}
+
+.keyboard-container {
+  margin-top: 0;
+  justify-items: center;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: flex;
+  margin: 0 auto 6px;
+  justify-items: center;
+  align-items: center;
+}
+
+.keyboard-letter {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: flex;
+  min-width: 30px;
+  padding: 5px;
+  height: 43px;
+  margin-left: 4px;
+  border-radius: .15rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #a6a4a4;
+  color: white;
+  transition: background-color 1.5s ease, color 1.5s ease;
+  transition-delay: .5s;
+}
+
+.keyboard-letter:hover {
+  filter: brightness(90%);
+}
+
+.keyboard-letter:active {
+  animation-name: Grow;
+  animation-duration: 100ms;
+  filter: brightness(80%);
+}
+
+@keyframes Reveal {
+  from {
+    transform: scale(1,0);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+
+.grow {
+  animation-name: Grow;
+  animation-duration: .15s;
+  border: 1px solid rgb(230, 230, 230);;
+}
+
+@keyframes Grow {
+  from {
+    transform: scale(1,1)
+  }
+  to {
+    transform: scale(1.11,1.11)
+  }
+}
+
+
+@media (min-width: 600px) {
+  .guesses-container {
+    transform: scale(1.1);
+    margin-top: 20px;
+  }
+
+  .keyboard-letter {
+    height: 38px;
+  }
+
+  .keyboard-container {
+    margin-top: 70px;
+    transform: scale(1.25)
+  }
+}
+
+@media (max-width: 1400px) {
+
+  .title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+
+  }
+
+  .keyboard-container {
+    margin-top: 50px;
+  }
+}
+
+@media(min-width: 1400px) {
+  .game-container {
+    zoom: 110%;
+  }
+}
+
+@media(min-width: 1600px) {
+  .game-container {
+    zoom: 135%;
+  }
+}
