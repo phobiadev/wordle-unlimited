@@ -18,9 +18,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(1.5);
   margin: 0;
   
+}
+
+.title  * {
+  font-size: 150%;
 }
 
 .title-word-wordle {
@@ -70,9 +73,10 @@ body {
 }
 
 .game-container {
+  height: 100%;
   display: grid;
   justify-content: center;
-  align-items: center;
+  margin-top: calc(20vh - 100px);
   margin-top: 10px;
   text-align: center;
 }
@@ -105,8 +109,13 @@ body {
   
 }
 
+#root {
+  height: 70vh;
+}
+
 .keyboard-container {
-  margin-top: 0;
+  transform: scale(1.05,1.2);
+  margin-top: calc(20vh - 100px);
   justify-items: center;
   align-items: center;
 }
@@ -173,7 +182,6 @@ body {
 @media (min-width: 600px) {
   .guesses-container {
     transform: scale(1.1);
-    margin-top: 20px;
   }
 
   .keyboard-letter {
@@ -181,7 +189,6 @@ body {
   }
 
   .keyboard-container {
-    margin-top: 70px;
     transform: scale(1.25)
   }
 }

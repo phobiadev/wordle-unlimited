@@ -172,10 +172,6 @@ export default function App() {
                 </div>
 
 
-
-                <div className="divider" />
-
-
             </div>
 
 
